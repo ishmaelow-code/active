@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghana Police Service - Election Security Operations Center (E-SOC)</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gps: {
+              navy: '#0b132b',
+              dark: '#070a14',
+              card: '#111827',
+              border: '#1f293d',
+              gold: '#e5a93c',
+              goldHover: '#c88f28',
+              red: '#ef4444',
+              green: '#10b981',
+              yellow: '#f59e0b',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar for Tactical UI */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b132b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e5a93c;
+    }
+
+    /* Pulsing Beacon Animations */
+    @keyframes pulse-red {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8); }
+      70% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+    .pulsing-beacon-red {
+      border-radius: 50%;
+      animation: pulse-red 1.5s infinite;
+    }
+
+    @keyframes pulse-gold {
+      0% { box-shadow: 0 0 0 0 rgba(229, 169, 60, 0.8); }
+      70% { box-shadow: 0 0 0 12px rgba(229, 169, 60, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(229, 169, 60, 0); }
+    }
+    .pulsing-beacon-gold {
+      border-radius: 50%;
+      animation: pulse-gold 2s infinite;
+    }
+
+    /* Leaflet Dark Map Tweaks */
+    .leaflet-container {
+      background: #080d1a !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+    .leaflet-popup-content-wrapper {
+      background: #111827 !important;
+      color: #f8fafc !important;
+      border: 1px solid #1f293d;
+      border-radius: 8px !important;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.7) !important;
+    }
+    .leaflet-popup-tip {
+      background: #111827 !important;
+    }
+
+    .glass-panel {
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans overflow-hidden bg-slate-950 text-slate-100">
+
+                     </h1>
+          <span class="bg-red-950/80 border border-red-500/50 text-red-400 text-[10px] font-extrabold px-2 py-0.5 rounded-full flex items-center gap-1.5 animate-pulse">
+            <span class="w-2 h-2 rounded-full bg-red-500 inline-block"></span>
+            LIVE / E-SOC ACTIVE
+          </span>
+        </div>
+        
